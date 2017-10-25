@@ -1,3 +1,15 @@
+class AccountType
+  def interest_rate
+    0
+  end
+end
+
+class SavingAccount < AccountType
+  def interest_rate
+    0.01 / 100
+  end
+end
+
 class Account
   attr_accessor :interest_rate
 
