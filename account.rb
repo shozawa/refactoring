@@ -1,4 +1,12 @@
 class Account
+  def initialize(interest_rate)
+    @interest_rate = interest_rate
+  end
+
+  def interest_for_amount_days(amount, days)
+    @interest_rate * amount * days / 365
+  end
+
   def gamma(input_val, quantity, year_to_date)
     Gamma.new(self, input_val, quantity, year_to_date).compute
   end
