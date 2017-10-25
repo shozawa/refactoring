@@ -1,7 +1,10 @@
 class Order
   def price
-    base_price = @quantity * @item_price
     discounted_price(base_price)
+  end
+
+  def base_price
+    @quantity * @item_price
   end
 
   def discounted_price(base_price)
