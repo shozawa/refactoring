@@ -11,10 +11,11 @@ class SavingAccount < AccountType
 end
 
 class Account
-  attr_accessor :interest_rate
+  attr_accessor :account_type
+  delegate :interest_rate, to: :account_type
 
-  def initialize(interest_rate)
-    @interest_rate = interest_rate
+  def initialize(account_type)
+    @account_type = account_type
   end
 
   def interest_for_amount_days(amount, days)
