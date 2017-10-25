@@ -10,6 +10,10 @@ class Account
     important_value_3 - 2 * important_value_1
   end
 
+  def delta
+    1234
+  end
+
   class Gamma
     attr_reader :account,
                 :input_val,
