@@ -18,5 +18,12 @@ class Account
                 :important_value_1,
                 :important_value_2,
                 :important_value_3
+
+    def initialize(account, input_val, quantity, year_to_date)
+      @account = account
+      @input_val = input_val
+      @quantity = quantity
+      @year_to_date = year_to_date
+    end
   end
 end
